@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salesforce Mcconfig test</title>
+    <script type="application/javascript">
+        /**
+         * Created by jakubpas@gmail.com on 11/4/16.
+         */
+        var form = document.createElement("form");
+        form.method = "POST";
+        //form.action = "https://salesforcetest.eniro.com/mcconfig/form";
+        form.action = "http://web2.test.media.eniro/mcconfig/form";
+
+        var hiddenField = document.createElement("input");
+        addHidden('country','SE');
+        addHidden('locale','sv_SE');
+        addHidden('currency','SEK');
+        addHidden('packageLabel','SMB_BASIC');
+        addHidden('monthlyBudget','4000');
+        addHidden('mediaSpendFraction','0.70');
+        addHidden('companyName','Eniro Sverige AB');
+        addHidden('address','Gustav III:s Boulevard 40, 169 73 SOLNA');
+        addHidden('targetUrl','http://www.enirogroup.com');
+        addHidden('startDate','2013-12-15');
+        addHidden('endDate','');
+        addHidden('mayKeepExistingData','true');
+        addHidden('systemId','DEMO');
+        addHidden('customerId','765432');
+        addHidden('userId','demo20');
+        addHidden('bingBlacklist','false');
+        addHidden('splAccountId','12345');
+        addHidden('savedFormId','');
+        form.appendChild(hiddenField);
+        form.setAttribute("target", "_blank");
+        form.submit();
+
+        function addHidden(key, value) {
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value;
+            form.appendChild(input);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
