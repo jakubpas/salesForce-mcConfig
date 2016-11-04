@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salesforce Mcconfig test</title>
+    <script type="application/javascript">
+        /**
+         * Created by jakubpas@gmail.com on 11/4/16.
+         */
+        var form = document.createElement("form");
+        form.method = "POST";
+        //form.action = "https://salesforcetest.eniro.com/mcconfig/form";
+        form.action = "http://web2.test.media.eniro/mcconfig/order";
+
+        var hiddenField = document.createElement("input");
+        addHidden("country", "SE");
+        addHidden("locale", "sv_SE");
+        addHidden("currency", "SEK");
+        addHidden("packageLabel", "SMB_BASIC");
+        addHidden("monthlyBudget", "4000");
+        addHidden("mediaSpendFraction", "0.7");
+        addHidden("companyDisplayName", "Eniro Sverige AB");
+        addHidden("address", "Gustav III:s Boulevard 40, 169 73 SOLNA");
+        addHidden("targetUrl", "http://www.enirogroup.com");
+        addHidden("startDate", "2013-12-15");
+        addHidden("mayKeepExistingData", "true");
+        addHidden("systemId", "DEMO");
+        addHidden("customerId", "765432");
+        addHidden("userId", "demo20");
+        addHidden("bingBlacklist", "false");
+        addHidden("splAccountId", "12345");
+        addHidden("firstMonthBudgetType", "FULL");
+        addHidden("includeGoogleAnalyticsTags", "on");
+        addHidden("networks", "google");
+        addHidden("networks", "bing");
+        addHidden("location.searchAddress","Gustav III:s Boulevard 40, 169 73 SOLNA");
+        addHidden('locations[0].language', "sv");
+        addHidden("locations[0].name", "Eniro Sverige AB");
+        addHidden("locations[0].landingUrl", "http://www.enirogroup.com");
+        addHidden("locations[0].requestedDisplayUrl", "www.enirogroup.com");
+        addHidden("locations[0].address.country","se");
+        addHidden("locations[0].radius","50");
+        addHidden("locations[0].address.country","se");
+        addHidden("locations[0].address.lon","18.01671410");
+        addHidden("locations[0].address.lat","59.37264252");
+        addHidden("locations[0].categoryIds","SE2200734");
+        form.appendChild(hiddenField);
+        form.setAttribute("target", "_blank");
+        form.submit();
+
+        function addHidden(key, value) {
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value;
+            form.appendChild(input);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
